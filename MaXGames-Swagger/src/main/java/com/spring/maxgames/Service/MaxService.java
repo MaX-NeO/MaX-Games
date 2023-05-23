@@ -121,4 +121,18 @@ public class MaxService {
 		Page<Data> xPage = dRepo.findAll(PageRequest.of(offset, size, Sort.by(field).ascending()));
 		return xPage.getContent();
 	}
+// Find by Game type
+	public List<Data> findGamebyType(String field_data){
+		return dRepo.findByGametype(field_data);
+	}
+// List Game types
+    public List<String> getallGameTypes() {
+        return dRepo.findAllGameTypes();
+    }
+// List Each Game's 1st cover url
+    public List<String> getAllCoverUrl1() {
+        return dRepo.findCoverUrl1();
+    }
+	
+	
 }

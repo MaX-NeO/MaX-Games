@@ -97,4 +97,19 @@ public class MaxController {
 	private List<Data> sortpageGames(@PathVariable("offset") int offset,@PathVariable("size") int size,@PathVariable("field") String field ){
 		return servicex.pagingsortingGames(offset, size, field);
 	}
+	@Tag(name="Find Game by Category", description = "Find a Games by Categories")
+	@GetMapping("/game/categories/{gametype}")
+	public List<Data> findGametype(@PathVariable String gametype){
+		return servicex.findGamebyType(gametype);
+	}
+	@Tag(name="Get Game Categories", description = "List all Gametypes only")
+    @GetMapping("/gametypes")
+    public List<String> getAllGameTypes() {
+        return servicex.getallGameTypes();
+    }
+	@Tag(name="Get Game Cover URL", description = "List all Game's 1'st Cover URL only")
+    @GetMapping("/game/coverurl1data")
+    public List<String> getAllCoverUrl1() {
+        return servicex.getAllCoverUrl1();
+    }
 }
