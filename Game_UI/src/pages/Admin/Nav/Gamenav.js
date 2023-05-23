@@ -13,9 +13,9 @@ export default function GameNav() {
 
     const userlogout = () => {
         if (isLoggedIn) {
+            navigate('/login');
             Cookies.remove('isLoggedIn');
             setIsLoggedIn(false);
-            navigate('/login');
         } else {
             navigate('/login');
         }

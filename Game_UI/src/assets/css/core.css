@@ -846,9 +846,10 @@ label {
 
 .game-sub {
 	border: 1px solid #046003;
-	width: 10vw;
-	padding: 0.5rem;
-	text-align: center;
+    width: 15vw;
+    padding: 0.5rem;
+    text-align: center;
+    margin-top: 1.2rem;
 }
 
 .game-controls {
@@ -1003,7 +1004,7 @@ label {
 	font-size: 2rem;
 	font-weight: 600;
 	margin-left: 0px;
-	top: -12px;
+	top: 1vh;
 	left: 0px;
 	position: absolute;
 	border-left: 2px solid #07bc0c;

@@ -13,8 +13,11 @@ const Gamesx= () => axios.get(`${URL}/games`)
 const GameView = (id) => axios.get(`${URL}/game/${id}`);
 const GameDelete = (id) =>axios.delete(`${URL}/game/${id}`);
 const GameUpdate = (id, updatedGame) => axios.put(`${URL}/game/${id}`, updatedGame);
-const GameAdd =(addGame) => axios.post(`${URL}/game`,addGame)
+const GameAdd =(addGame) => axios.post(`${URL}/game`,addGame);
+const GameCover =()=> axios.get(`${URL}/game/coverurl1data`);
+const GameCategoriesData = () => axios.get(`${URL}/gametypes`);
+const GameCategoriesDataView = (gametype) => axios.get(`${URL}/game/categories/${gametype}`);
 
 
 
-export{SignIn,SignUp,Gamesx,GameAdd,GameView,GameUpdate,GameDelete}
+export{SignIn,SignUp,Gamesx,GameAdd,GameView,GameUpdate,GameDelete,GameCover,GameCategoriesData,GameCategoriesDataView}

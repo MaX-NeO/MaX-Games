@@ -9,6 +9,7 @@ import GameViewPage from "./pages/Game";
 import Dashboard from "./pages/Admin/Dashboard";
 import Addgame from "./pages/Admin/Addgame";
 import Editgame from "./pages/Admin/Editgame";
+import GameCategories from "./pages/GameCategories";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route exact path="/Login" element={<Login/>}/>
           <Route exact path="/Register" element={<Register/>}/>
           <Route exact path="/Game/:id" element={<GameViewPage/>}/>
+          <Route exact path="/Game/categories/:gametype" element={<GameCategories/>}/>
+          
           {/* Auth routes */}
           <Route exact path="/dashboard/games" element={<Dashboard/>}/>
           <Route exact path="/dashboard/games/add" element={<Addgame/>}/>

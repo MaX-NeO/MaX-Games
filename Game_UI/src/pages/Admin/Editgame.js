@@ -50,7 +50,7 @@ export default function EditGame() {
         try {
             await GameUpdate(id, game);
             // toast.info
-            toast.info('Game Uspdate !', {
+            toast.info('Game Update !', {
                 position: "bottom-right",
                 autoClose: 1000,
                 hideProgressBar: false,

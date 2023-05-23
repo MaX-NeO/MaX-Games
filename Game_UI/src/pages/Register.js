@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 import { SignUp } from '../services/api'
 import Logo from '../assets/img/logo.png';
 import { ToastContainer, toast } from 'react-toastify';
@@ -51,16 +51,17 @@ export default function Register() {
         theme: "dark",
       });
     } else {
-      toast.error('Invalid Username', {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
+      console.log(res.data);
+      // toast.error('Invalid Username', {
+      //   position: "bottom-right",
+      //   autoClose: 3000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "dark",
+      // });
     }
 
   }

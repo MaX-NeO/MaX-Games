@@ -1,30 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../assets/css/Carousel.css";
 
 const Carousel = ({ images }) => {
   const [current, setCurrent] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
-  let timeOut = null;
+  const timeOutRef = useRef(null);
 
   useEffect(() => {
-    timeOut = autoPlay && setTimeout(slideRight, 2500);
+    const slideRight = () => {
+      setCurrent((prevCurrent) => (prevCurrent === images.length - 1 ? 0 : prevCurrent + 1));
+    };
+
+    timeOutRef.current = autoPlay && setTimeout(slideRight, 2500);
 
     return () => {
-      clearTimeout(timeOut);
+      clearTimeout(timeOutRef.current);
     };
-  }, [current, autoPlay]);
-
-  const slideRight = () => {
-    setCurrent((prevCurrent) => (prevCurrent === images.length - 1 ? 0 : prevCurrent + 1));
-  };
-
+  }, [current, autoPlay, images]);
 
   return (
     <div
       className="carousel"
       onMouseEnter={() => {
         setAutoPlay(false);
-        clearTimeout(timeOut);
+        clearTimeout(timeOutRef.current);
       }}
       onMouseLeave={() => {
         setAutoPlay(true);
