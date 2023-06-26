@@ -1,4 +1,4 @@
-<style color="red> Discontinued Repo ...</style>
+Discontinued Repo ...
 
 
 This Varient discontinued due to 'Create-react-app' glitches
