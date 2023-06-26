@@ -1,3 +1,3 @@
 Discontinued ...
 
-Kindly use the VITE varient
+Kindly use the VITE varient for Upto Date Version
